@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1.2 - Local Bootstrap Files</title>
+  
+  <!-- Link Local Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    
+    <div class="p-5 mb-4 bg-white border rounded-3 shadow-sm text-center">
+      <h1 class="display-6 fw-bold">Local Bootstrap Setup</h1>
+      <p class="lead text-muted">
+        This page links to Bootstrap files that have been downloaded locally.
+      </p>
+      
+      <div class="my-4 text-start bg-dark text-light p-3 rounded">
+        <code>&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</code><br>
+        <code>&lt;script src="js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+      </div>
+
+      <button class="btn btn-success" onclick="alert('Local Bootstrap is working!')">
+        Test Local JS Alert
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Link Local Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

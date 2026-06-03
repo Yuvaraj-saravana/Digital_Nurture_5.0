@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3.2 - Bootstrap Containers, Rows, and Columns</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <!-- Fixed Container -->
+  <div class="container my-5">
+    <div class="p-4 bg-white border rounded shadow-sm mb-4">
+      <h1 class="h3 fw-bold">Fixed Container (.container)</h1>
+      <p class="text-muted">
+        This section is wrapped inside a standard <code>.container</code>. It has a responsive fixed-width that centers itself on the page with horizontal padding.
+      </p>
+    </div>
+
+    <!-- Row with 2 Columns -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-8">
+        <div class="p-4 bg-white border rounded shadow-sm h-100">
+          <h3>Main Content (col-md-8)</h3>
+          <p>This column takes up 8 of the 12 available grid columns on medium screens and larger.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white border rounded shadow-sm h-100">
+          <h3>Sidebar (col-md-4)</h3>
+          <p>This column takes up 4 of the 12 grid columns on medium screens and larger.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fluid Container -->
+  <div class="container-fluid bg-secondary text-white py-4 mt-5">
+    <div class="container">
+      <h2 class="h4">Fluid Container Footer Background (.container-fluid)</h2>
+      <p class="mb-0">
+        The outer background wrapper uses <code>.container-fluid</code> to stretch 100% across the viewport width. Inside it, we use <code>.container</code> to keep the text aligned with the rest of the grid.
+      </p>
+    </div>
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

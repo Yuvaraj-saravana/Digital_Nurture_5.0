@@ -1,0 +1,6 @@
+// 1. Override theme variables before importing Bootstrap
+$primary: #e67e22;       // Override primary theme color to Orange
+$border-radius: 1.5rem;  // Increase the default border-radius
+
+// 2. Import Bootstrap core styles
+@import "../node_modules/bootstrap/scss/bootstrap";

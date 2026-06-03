@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 17.2 - Icon-Only Buttons</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Link Bootstrap Icons via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Icon-Only Action Buttons</h1>
+      <p class="lead text-muted">Replacing standard text links with Bootstrap Icon-only button nodes.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        
+        <div class="card p-4 shadow-sm bg-white mb-4">
+          <h5 class="border-bottom pb-2 mb-3">Item Toolbar</h5>
+          <p class="text-muted small">Standard actions (Search, Edit, Delete, settings) styled cleanly using icon glyphes.</p>
+          
+          <div class="d-flex justify-content-center gap-2">
+            
+            <!-- Search Button -->
+            <button class="btn btn-outline-primary" aria-label="Search" onclick="alert('Search clicked!')">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Edit Button -->
+            <button class="btn btn-outline-warning" aria-label="Edit" onclick="alert('Edit clicked!')">
+              <i class="bi bi-pencil-square"></i>
+            </button>
+
+            <!-- Delete Button -->
+            <button class="btn btn-outline-danger" aria-label="Delete" onclick="alert('Delete clicked!')">
+              <i class="bi bi-trash"></i>
+            </button>
+
+            <!-- Settings Button -->
+            <button class="btn btn-outline-secondary" aria-label="Settings" onclick="alert('Settings clicked!')">
+              <i class="bi bi-gear"></i>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="p-3 border rounded bg-white text-start">
+          <p class="mb-0 small text-muted">
+            💡 <strong>Accessibility Note:</strong> Since these buttons contain no textual copy, we add the <code>aria-label</code> attribute to maintain screen-reader support for accessibility.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 19.2 - Customizing Variables via Sass</title>
+  
+  <!-- Link to the custom compiled CSS sheet -->
+  <link rel="stylesheet" href="css/custom.css">
+  
+  <!-- Fallback basic inline styles for preview in case CSS is not compiled yet -->
+  <style>
+    /* In actual placement review, this is replaced by compiled custom.css rules */
+    .preview-card {
+      border: 2px dashed #e67e22;
+      border-radius: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container my-5 text-center">
+    
+    <div class="card p-5 bg-white shadow-sm max-width-md mx-auto preview-card" style="max-width: 600px;">
+      <span class="badge bg-secondary mb-3 align-self-center">Exercise 19.2</span>
+      <h1 class="fw-bold mb-3">Customized Bootstrap Theme</h1>
+      <p class="lead text-muted mb-4">
+        Customizing variables like <code>$primary</code> and <code>$border-radius</code> compiles directly into the theme layout.
+      </p>
+
+      <!-- Customized Button Demo -->
+      <button class="btn btn-primary btn-lg rounded shadow-sm px-4 mb-4" style="background-color: #e67e22; border-color: #e67e22;">
+        Custom Primary Button
+      </button>
+
+      <div class="text-start bg-light p-3 border rounded">
+        <h6>Overrides applied in SCSS:</h6>
+        <pre class="mb-0 text-dark"><code>$primary: #e67e22; // Orange Color
+$border-radius: 1.5rem; // Thicker rounded corners</code></pre>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

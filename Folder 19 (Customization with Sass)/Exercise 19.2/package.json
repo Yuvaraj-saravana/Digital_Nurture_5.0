@@ -1,0 +1,14 @@
+{
+  "name": "exercise-19-2-sass-customization",
+  "version": "1.0.0",
+  "description": "Customizing variables via Sass in Bootstrap 5",
+  "scripts": {
+    "compile-sass": "sass scss/custom.scss css/custom.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.77.2"
+  }
+}

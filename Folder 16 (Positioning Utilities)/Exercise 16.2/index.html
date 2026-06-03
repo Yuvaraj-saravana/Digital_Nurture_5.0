@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 16.2 - Absolute Position Badge Overlay</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 col-md-6 col-lg-4">
+        
+        <!-- Position Relative Container Card -->
+        <div class="card position-relative shadow-sm overflow-hidden">
+          
+          <!-- Absolute Position Badge at the Top-Right Corner -->
+          <span class="position-absolute top-0 end-0 badge bg-danger m-3 py-2 px-3">
+            Hot Deal
+          </span>
+
+          <!-- Image/SVG -->
+          <svg class="bd-placeholder-img card-img-top bg-secondary" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Product Image Placeholder">
+            <rect width="100%" height="100%" fill="#adb5bd"></rect>
+            <text x="50%" y="50%" fill="#495057" dy=".3em" text-anchor="middle" font-size="1.25rem" font-family="sans-serif">Product Image</text>
+          </svg>
+
+          <!-- Card Body -->
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Wireless Headphones</h5>
+            <p class="card-text text-muted">
+              High fidelity active noise cancelling headphones with 30-hour battery life.
+            </p>
+            <button class="btn btn-primary btn-sm">Buy Now</button>
+          </div>
+
+        </div>
+
+        <div class="mt-4 p-3 bg-white border rounded">
+          <p class="mb-0 small text-muted">
+            <strong>How it is built:</strong> The main card has <code>.position-relative</code>. The badge has <code>.position-absolute .top-0 .end-0</code> to pin it to the top-right edge.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

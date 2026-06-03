@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3.1 - Responsive Grid Layout</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Responsive Three-Column Grid</h1>
+      <p class="lead text-muted">
+        Stacks vertically on mobile, 2 per row on tablets, and 3 per row on desktops.
+      </p>
+    </div>
+
+    <!-- Grid Row -->
+    <div class="row g-4">
+
+      <!-- Column 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Column 1</h5>
+            <p class="card-text">This column takes up full width (col-12) on mobile screens, half width (col-md-6) on tablet screens, and one-third width (col-lg-4) on desktop screens.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Column 2</h5>
+            <p class="card-text">Bootstrap handles this wrapping dynamically. On tablet screens, this column sits next to Column 1, while Column 3 wraps underneath them.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Column 3</h5>
+            <p class="card-text">On desktop screens, all three columns fit in a single row side-by-side because the sum of the columns (4 + 4 + 4) equals 12.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

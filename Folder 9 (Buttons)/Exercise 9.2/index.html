@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 9.2 - Button Groups and Toggles</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Button Groups & Toggles</h1>
+      <p class="lead text-muted">Using <code>btn-group</code> and <code>btn-check</code> classes.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Button Group Demo -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title border-bottom pb-2">Button Group (.btn-group)</h5>
+          <p class="text-muted">A button group wraps multiple buttons into a single horizontal block.</p>
+          
+          <div class="btn-group my-3" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Left</button>
+            <button type="button" class="btn btn-primary">Middle</button>
+            <button type="button" class="btn btn-primary">Right</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggle Buttons Demo -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="card-title border-bottom pb-2">Toggle Buttons (Checkbox Style)</h5>
+          <p class="text-muted">Uses hidden checkbox elements styled as standard clickable buttons.</p>
+          
+          <div class="my-3 d-flex gap-2">
+            <!-- Toggle Checkbox 1 -->
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline-success" for="btncheck1">Bold Text</label>
+
+            <!-- Toggle Checkbox 2 -->
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-success" for="btncheck2">Italic Text</label>
+
+            <!-- Toggle Checkbox 3 -->
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-outline-success" for="btncheck3">Underline Text</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

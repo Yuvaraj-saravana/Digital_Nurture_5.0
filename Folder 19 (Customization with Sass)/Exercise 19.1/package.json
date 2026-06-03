@@ -1,0 +1,14 @@
+{
+  "name": "exercise-19-1-sass-setup",
+  "version": "1.0.0",
+  "description": "Sass project setup for Bootstrap 5 customization",
+  "scripts": {
+    "compile-sass": "sass scss/custom.scss css/custom.css --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.77.2"
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11.2 - Media Object Layout</title>
+  
+  <!-- Link Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container my-5">
+    
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Media Object Layout</h1>
+      <p class="lead text-muted">
+        In Bootstrap 5, the legacy <code>.media</code> class was removed. We build it using flexbox classes.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        
+        <!-- Media Block Container -->
+        <div class="card p-4 shadow-sm mb-4 bg-white">
+          <h5 class="border-bottom pb-2 mb-4">Comments List</h5>
+
+          <!-- Comment 1 (Flex Media Object) -->
+          <div class="d-flex align-items-start mb-4">
+            
+            <!-- User Avatar (Image on the left) -->
+            <div class="flex-shrink-0 me-3">
+              <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" class="bg-secondary text-white rounded">
+                <rect width="100%" height="100%" fill="#adb5bd"></rect>
+                <text x="50%" y="50%" fill="#ffffff" dy=".3em" text-anchor="middle" font-size="12">User A</text>
+              </svg>
+            </div>
+            
+            <!-- Content Area (on the right) -->
+            <div class="flex-grow-1">
+              <h5 class="mt-0 fw-bold h6">Johnathan Smith <small class="text-muted fw-normal ms-2">2 hours ago</small></h5>
+              <p class="text-muted mb-0">
+                This is a mock comment illustrating the alignment of an image to the left of the textual content. Using flexbox utilities like <code>d-flex</code> and <code>align-items-start</code> provides a robust, responsive layout.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Comment 2 (Flex Media Object) -->
+          <div class="d-flex align-items-start">
+            
+            <!-- User Avatar -->
+            <div class="flex-shrink-0 me-3">
+              <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" class="bg-secondary text-white rounded">
+                <rect width="100%" height="100%" fill="#adb5bd"></rect>
+                <text x="50%" y="50%" fill="#ffffff" dy=".3em" text-anchor="middle" font-size="12">User B</text>
+              </svg>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="flex-grow-1">
+              <h5 class="mt-0 fw-bold h6">Emily Watson <small class="text-muted fw-normal ms-2">4 hours ago</small></h5>
+              <p class="text-muted mb-0">
+                Excellent explanation of the Bootstrap 5 changes. The flex utilities are much easier to work with than the previous media layout component!
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Link Bootstrap 5 JS Bundle via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

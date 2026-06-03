@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Local Community Event Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        h1 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2563eb;
+            margin-top: 25px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 15px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Help Center & User Guide</h1>
+    <p>Welcome to the user guide for the Local Community Event Portal. Below, we explain the main features of our website and how you can interact with it.</p>
+    
+    <h2>1. Browsing Events</h2>
+    <p>All upcoming community events are displayed dynamically as cards in the **Upcoming Events** section. You can filter these events using the category selection dropdown, or search for events by typing keywords into the search box. The system updates the list dynamically as you type or change filters.</p>
+    
+    <h2>2. Registering for Events</h2>
+    <ul>
+        <li><strong>From Event Cards:</strong> Simply click the "Register" button on any available event card. An alert will confirm your registration, and the remaining seat counter will decrease automatically.</li>
+        <li><strong>From the Registration Form:</strong> Scroll down to the Event Registration Form, fill out your full name, email address, select your preferred event from the dropdown options, and click "Submit Registration". Our system validates the inputs, simulates a server check delay, and confirms registration successfully.</li>
+    </ul>
+
+    <h2>3. Key Developer Features</h2>
+    <p>This project demonstrates a variety of core frontend development concepts:</p>
+    <ul>
+        <li><strong>Closures:</strong> Used to manage session-specific registration data cleanly without polluting the global scope.</li>
+        <li><strong>jQuery Animations:</strong> The interactive demo boxes in the Contact section showcase the practical difference between CSS <code>visibility: hidden</code> and <code>display: none</code> in the page layout.</li>
+    </ul>
+
+    <p><a href="index.html" class="back-link">Return to Event Portal</a></p>
+</body>
+</html>

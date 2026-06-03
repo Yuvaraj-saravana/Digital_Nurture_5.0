@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Summer Music Fest",
+        "category": "Music",
+        "date": "2026-08-15",
+        "seats": 50,
+        "image": "https://loremflickr.com/400/300/music,festival?lock=1",
+        "description": "Live performances by local bands and amazing food stalls."
+    },
+    {
+        "id": 2,
+        "name": "Annual Charity Run",
+        "category": "Sports",
+        "date": "2026-08-20",
+        "seats": 0,
+        "image": "https://loremflickr.com/400/300/marathon,run?lock=1",
+        "description": "Over 500 runners participated to raise funds for the shelter."
+    },
+    {
+        "id": 3,
+        "name": "Local Food Fair",
+        "category": "Food",
+        "date": "2026-09-05",
+        "seats": 100,
+        "image": "https://loremflickr.com/400/300/food,stall?lock=1",
+        "description": "Showcasing the best culinary talents in our neighborhood."
+    },
+    {
+        "id": 4,
+        "name": "Art Exhibition",
+        "category": "Art",
+        "date": "2026-09-12",
+        "seats": 30,
+        "image": "https://loremflickr.com/400/300/art,gallery?lock=1",
+        "description": "Beautiful artworks created by our talented residents."
+    },
+    {
+        "id": 5,
+        "name": "Tech Enthusiasts Meetup",
+        "category": "Technology",
+        "date": "2026-10-01",
+        "seats": 20,
+        "image": "https://loremflickr.com/400/300/tech,meetup?lock=1",
+        "description": "Sharing knowledge on the latest technology trends."
+    },
+    {
+        "id": 6,
+        "name": "Library Book Reading",
+        "category": "Education",
+        "date": "2026-10-15",
+        "seats": 15,
+        "image": "https://loremflickr.com/400/300/library,reading?lock=1",
+        "description": "Interactive storytelling sessions for kids at the library."
+    }
+]

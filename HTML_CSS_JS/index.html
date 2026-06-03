@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS for welcome banner design overrides -->
+    <style>
+        #welcomeBanner {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 40px 20px;
+            color: #ffffff;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.15);
+        }
+    </style>
+    
+    <!-- Import jQuery from CDN for transition animations -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Import local javascript logic -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVIGATION SECTION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">CommuniLink</div>
+            <ul>
+                <!-- Nav list items link to corresponding section IDs on page -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Open the help page in a separate tab -->
+                <li><a href="help.html" target="_blank" class="nav-help-btn">Help Center</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main>
+        
+        <!-- Welcome / Home intro block -->
+        <section id="home">
+            <div id="welcomeBanner">
+                <h1>Local Community Event Portal</h1>
+                <!-- Styled span inline to call out active status -->
+                <p>Welcome! Connecting neighbors and sharing local experiences. <span style="color: #93c5fd; font-style: italic; font-weight: bold;">Happening right now in your neighborhood!</span></p>
+            </div>
+            
+            <div class="intro-text">
+                <h3>Welcome to Our Neighborhood Hub</h3>
+                <p>This portal is designed to keep our community connected. We list local workshops, neighborhood cleanups, block parties, and town hall meetings. Explore the events below, filter by your favorite categories, and register to secure your spot!</p>
+                <p class="highlight">Note: Registrations are free but seats are limited. Make sure to sign up early!</p>
+            </div>
+        </section>
+
+        <!-- Events Listing and Search Filters -->
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="categoryFilter">Filter by Category:</label>
+                    <select id="categoryFilter">
+                        <option value="All">All Categories</option>
+                        <option value="Education">Education</option>
+                        <option value="Social">Social</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Art">Art</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchInput">Search Events:</label>
+                    <input type="text" id="searchInput" placeholder="Type event name...">
+                </div>
+            </div>
+
+            <!-- Dynamically populated event cards load here -->
+            <div id="eventsContainer"></div>
+        </section>
+
+        <!-- News articles layout section -->
+        <section id="news">
+            <h2>Community Newsletter & Updates</h2>
+            <div class="newspaper-section">
+                <article class="news-item">
+                    <h4>Renovation Project Approved</h4>
+                    <p>The municipal council has officially approved the development plan for the new Central Green Park. The construction is scheduled to start next month and will feature modern walking paths, safe playground areas, and a dedicated community gardening space.</p>
+                </article>
+                
+                <article class="news-item">
+                    <h4>Annual Food Drive Success</h4>
+                    <p>Thanks to all our generous neighbors, this year's Annual Charity Food Drive broke all previous records. We collected over 1,500 pounds of non-perishable food products, which have been successfully distributed to local shelters and food pantries.</p>
+                </article>
+                
+                <article class="news-item">
+                    <h4>Volunteers Wanted for Summer Fest</h4>
+                    <p>Planning for the annual Summer Festival is underway. The event committee is looking for energetic volunteers to help with stage setups, game stall coordination, and guest welcoming services. If you would like to help, please sign up through our registration form.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Event RSVP Form -->
+        <section id="registration">
+            <h2>Event Registration Form</h2>
+            <p class="section-desc">Select your event from the list below and enter your details to sign up.</p>
+            
+            <form id="regForm" novalidate>
+                <div class="form-group">
+                    <label for="regName">Your Full Name:</label>
+                    <input type="text" id="regName" name="fullName" placeholder="e.g. John Doe">
+                    <span id="nameError" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regEmail">Your Email Address:</label>
+                    <input type="email" id="regEmail" name="emailAddress" placeholder="e.g. john@example.com">
+                    <span id="emailError" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="regEvent">Select Event to Join:</label>
+                    <select id="regEvent" name="selectedEvent">
+                        <option value="">-- Choose an Event --</option>
+                    </select>
+                    <span id="eventError" class="error-message"></span>
+                </div>
+                
+                <!-- Display session registration counts -->
+                <p id="counterDisplay">
+                    Total registrations submitted during this session: 0
+                </p>
+                
+                <button type="submit" class="btn btn-submit">Submit Registration</button>
+            </form>
+            
+            <div id="formStatus"></div>
+        </section>
+
+        <!-- Address and Schedule details -->
+        <section id="contact">
+            <h2>Contact & Venue Schedule</h2>
+            <p class="section-desc">Need to reach the organizing team? Find our weekly hours and details below, or send us a message.</p>
+            
+            <div class="event-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Venue Location</th>
+                            <th>Open Hours</th>
+                            <th>Main Contact Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday - Wednesday</td>
+                            <td>Central Community Center</td>
+                            <td>09:00 AM - 05:00 PM</td>
+                            <td>info@communityportal.org</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday - Friday</td>
+                            <td>Central Community Center</td>
+                            <td>09:00 AM - 07:00 PM</td>
+                            <td>support@communityportal.org</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Town Library Annex</td>
+                            <td>10:00 AM - 04:00 PM</td>
+                            <td>events@communityportal.org</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Box displaying CSS visibility vs display modes with interactive buttons -->
+            <div class="demo-box">
+                <h4>CSS Display vs. Visibility Concept Demo</h4>
+                <p class="demo-intro">Interact with the buttons below to see how <code>visibility: hidden</code> and <code>display: none</code> differ in layout behavior.</p>
+                <div class="demo-control-buttons">
+                    <button type="button" class="btn btn-demo" id="btnToggleVis">Toggle Visibility (Hidden)</button>
+                    <button type="button" class="btn btn-demo" id="btnToggleDisp">Toggle Display (None)</button>
+                </div>
+                
+                <div id="visBox" class="visibility-hidden-demo">
+                    This block is set to <code>visibility: hidden</code>. It becomes invisible but <strong>still occupies its physical space</strong> in the page layout.
+                </div>
+                
+                <div id="dispBox" class="display-none-demo">
+                    This block is set to <code>display: none</code>. It is completely removed from the rendering flow and <strong>occupies no space</strong>.
+                </div>
+                <p class="demo-note">Notice how the surrounding elements adjust when toggling the boxes.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2026 Local Community Event Portal. All rights reserved.</p>
+        <p class="footer-subtext">A clean, beginner-friendly portfolio project demonstrating core web technologies.</p>
+    </footer>
+
+</body>
+</html>
